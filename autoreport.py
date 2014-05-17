@@ -1,5 +1,6 @@
 from BeautifulSoup import BeautifulSoup
 import urllib2
+from time import sleep
 
 xyList=[]
 
@@ -18,6 +19,7 @@ def main(xyLocation):
 		urllib2.install_opener(opener)
 		f = urllib2.urlopen('http://search.yahoo.co.jp/search?p=%E5%81%BD2ch%E9%A8%92%E5%8B%95&ei=UTF-8')
 		data = f.read()
+		sleep (randint(15,45))
 	except:
 		print 'Some Error Happened'
 
